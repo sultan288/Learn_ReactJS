@@ -4,7 +4,14 @@
 // import Card2 from "./components/Card2"
 // import Card3 from "./components/Card3";
 //import State from "./State"
-import ConditionalRendering from "./Conditional_Rendering/Index"
+//import ConditionalRendering from "./Conditional_Rendering/Index"
+//import Event_Handler_Class from "./Event_Handler/index"
+//import EventBinding from "./Event_Binding/EventBinding"
+//import HooksUseState from "./Hooks_UseState/HooksState"
+//import HooksUseStateUsingFnC from "./Hooks_UseState/HooksUseStateUsingFnC";
+//import Form from "./Form/Form";
+//import ShortEventHandler from "./Form/ShortEventHandler";
+import Form_pr from './Form/Form_pr'
 
 function App(){
 
@@ -19,9 +26,8 @@ function App(){
     //    items = Data.map((item) => <Card titleText={item.title} descText ={item.desc}/>)
 
     return <div>
-          <ConditionalRendering />
+            <Form_pr />
 
-            
            </div>
 }
 
