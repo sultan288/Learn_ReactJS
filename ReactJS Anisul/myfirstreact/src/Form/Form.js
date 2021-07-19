@@ -28,7 +28,7 @@ export default function Form() {
         //     password
         // };
         //console.log(name, email, password);
-        console.log(user);
+        console.log(user);     //console.log(userInfo);
         e.preventDefault();
     }
 

@@ -11,7 +11,7 @@
 //import HooksUseStateUsingFnC from "./Hooks_UseState/HooksUseStateUsingFnC";
 //import Form from "./Form/Form";
 //import ShortEventHandler from "./Form/ShortEventHandler";
-import Form_pr from './Form/Form_pr'
+import FormPr from './Form/Form_pr'
 
 function App(){
 
@@ -26,7 +26,7 @@ function App(){
     //    items = Data.map((item) => <Card titleText={item.title} descText ={item.desc}/>)
 
     return <div>
-            <Form_pr />
+            <FormPr />
 
            </div>
 }
