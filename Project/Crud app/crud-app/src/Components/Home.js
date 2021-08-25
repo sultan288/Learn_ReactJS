@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import styles from '../assets/Home.module.css';
 import { UserContext } from './UserContext';
 
 export default function Home() {
@@ -8,32 +8,38 @@ export default function Home() {
     // console.log(users);
     return (
         <div>
-            <h1>Home Page</h1>
-            <table>
-                <caption>User Details</caption>
-                <thead>
+            <div className={styles.ttbutton}>Users Data</div>
+            <Link to="/create">
+                <button className="button crbutton">Create User</button>
+            </Link>
+            <table className={styles.table}>
+                <thead className={styles.thead}>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Salary</th>
+                        <th className={styles.th1}>Id</th>
+                        <th className={styles.th1}>Name</th>
+                        <th className={styles.th1}>Position</th>
+                        <th className={styles.th1}>Salary</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     {users.map((user) => (
                         <tr>
-                            <th>{user.id}</th>
-                            <th>{user.name}</th>
-                            <th>{user.position}</th>
-                            <th>{user.salary}</th>
-                            <th>
-                                <button className="button1">View</button>
-                                <button className="button2">Edit</button>
-                                <Link to={'/delete/' + user.id}>
-                                    <button className="button3">Delete</button>
+                            <td>{user.id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.position}</td>
+                            <td>{user.salary}</td>
+                            <td>
+                                <Link to={'/read/' + user.id}>
+                                    <button className={styles.button}>Read</button>
                                 </Link>
-                            </th>
+                                <Link to={'/update/' + user.id}>
+                                    <button className="button2 button">Update</button>
+                                </Link>
+                                <Link to={'/delete/' + user.id}>
+                                    <button className="button3 button">Delete</button>
+                                </Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
