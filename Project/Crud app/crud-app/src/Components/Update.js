@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { UserContext } from './UserContext';
-
 export default function Update() {
     const [users, setUsers] = useContext(UserContext);
     const { id } = useParams();
@@ -34,8 +33,8 @@ export default function Update() {
 
     return (
         <div>
-            <div>ID No. {user[0].id}</div>
-            <form>
+            <form className="uform">
+                <div className="uid">ID No. {user[0].id}</div>
                 <label>Name</label>
                 <input
                     type="text"
@@ -64,10 +63,10 @@ export default function Update() {
                 ></input>
 
                 <Link to="/">
-                    <button onSubmit={() => UpdateUser} type="submit" className="button smbutton">
+                    <button onSubmit={() => UpdateUser} type="submit" className="button ubutton">
                         Update User
                     </button>
-                    <button className="button crbutton">Back to Home</button>
+                    <button className="button bhbutton">Back to Home</button>
                 </Link>
             </form>
         </div>

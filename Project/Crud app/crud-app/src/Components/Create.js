@@ -70,11 +70,11 @@ const Create = () => {
                     placeholder="Enter Salary"
                     onChange={createSalary}
                 ></input>
-                <button type="submit" className="button smbutton">
+                <button type="submit" className="button crbutton">
                     Create User
                 </button>
                 <Link to="/">
-                    <button className="button crbutton">Back to Home</button>
+                    <button className="button bhbutton">Back to Home</button>
                 </Link>
             </form>
         </div>

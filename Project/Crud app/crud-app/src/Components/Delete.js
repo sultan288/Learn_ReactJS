@@ -12,11 +12,11 @@ export default function Delete() {
     };
 
     return (
-        <div>
+        <div className="dform">
             <h1>Are you Sure?</h1>
             <Link to="/">
-                <button className="button1">Cancel</button>
-                <button onClick={() => deleteUser(id)} className="button3">
+                <button className="cancelbutton">Cancel</button>
+                <button onClick={() => deleteUser(id)} className="delbutton">
                     Delete
                 </button>
             </Link>

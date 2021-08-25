@@ -9,9 +9,7 @@ export default function Home() {
     return (
         <div>
             <div className={styles.ttbutton}>Users Data</div>
-            <Link to="/create">
-                <button className="button crbutton">Create User</button>
-            </Link>
+
             <table className={styles.table}>
                 <thead className={styles.thead}>
                     <tr>
@@ -31,19 +29,22 @@ export default function Home() {
                             <td>{user.salary}</td>
                             <td>
                                 <Link to={'/read/' + user.id}>
-                                    <button className={styles.button}>Read</button>
+                                    <button className={styles.button1}>Read</button>
                                 </Link>
                                 <Link to={'/update/' + user.id}>
-                                    <button className="button2 button">Update</button>
+                                    <button className={styles.button2}>Update</button>
                                 </Link>
                                 <Link to={'/delete/' + user.id}>
-                                    <button className="button3 button">Delete</button>
+                                    <button className={styles.button3}>Delete</button>
                                 </Link>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            <Link to="/create">
+                <button className={styles.crbutton}>Create User</button>
+            </Link>
         </div>
     );
 }

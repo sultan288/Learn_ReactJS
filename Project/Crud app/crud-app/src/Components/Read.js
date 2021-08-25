@@ -10,12 +10,12 @@ export default function Read() {
     console.log(user);
     return (
         <div className="read">
-            <h1>ID: {user[0].id}</h1>
-            <h1>Name: {user[0].name}</h1>
-            <h1>Position: {user[0].position}</h1>
-            <h1>Salary: {user[0].salary}/=</h1>
+            <h1>ID No: {user[0].id}</h1>
+            <h2>Name: {user[0].name}</h2>
+            <h2>Position: {user[0].position}</h2>
+            <h2>Salary: {user[0].salary}/=</h2>
             <Link to="/">
-                <button className="button1">Back to Home</button>
+                <button className="button rbhbutton">Back to Home</button>
             </Link>
         </div>
     );
